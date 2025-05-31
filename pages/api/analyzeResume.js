@@ -37,7 +37,7 @@ export default async function handler(req, res) {
 
 
     const result = await response.json();
-    console.log('Gemini full response:', JSON.stringify(result, null, 2));
+    // console.log('Gemini full response:', JSON.stringify(result, null, 2));
 
     const output = result?.candidates?.[0]?.content?.parts?.[0]?.text;
 
@@ -83,9 +83,9 @@ Only return a valid JSON object and nothing else. No explanations. No markdown. 
 Format:
 {
   "score": number (out of 100),
-  "strengths": [array of 3–5 strong points],
-  "weaknesses": [array of 3–5 weak points],
-  "suggestions": [array of 3–5 specific improvements]
+  "strengths": [array of 3-5 strong points],
+  "weaknesses": [array of 3-5 weak points],
+  "suggestions": [array of 3-5 specific improvements]
 }
 
 Resume:
